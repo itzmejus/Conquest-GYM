@@ -8,7 +8,7 @@ export default function PackageCard({ pkg }) {
       }`}
     >
       {pkg.recommended && (
-        <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-accent-500 px-4 py-1 text-xs font-bold uppercase tracking-wide text-white">
+        <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-accent-500 px-4 py-1 text-xs font-bold uppercase tracking-wide text-ink-950">
           Most Popular
         </span>
       )}
@@ -18,8 +18,9 @@ export default function PackageCard({ pkg }) {
       </h3>
       <p className="mt-2 text-center text-sm text-gray-400">{pkg.description}</p>
 
-      <div className="my-6 flex items-baseline justify-center gap-1">
-        <span className="text-4xl font-bold text-white">${pkg.price}</span>
+      <div className="my-6 flex items-baseline justify-center gap-1.5">
+        <span className="text-2xl font-bold text-white sm:text-3xl">AED</span>
+        <span className="text-4xl font-bold text-white">{pkg.price}</span>
         <span className="text-sm text-gray-400">/ {pkg.period}</span>
       </div>
 

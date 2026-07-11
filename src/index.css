@@ -30,7 +30,7 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-md bg-accent-500 px-6 py-3 font-heading text-sm font-semibold uppercase tracking-wider text-white hover:bg-accent-600 focus-visible:outline-accent-400;
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-accent-500 px-6 py-3 font-heading text-sm font-semibold uppercase tracking-wider text-ink-950 hover:bg-accent-400 focus-visible:outline-accent-400;
   }
 
   .btn-outline {

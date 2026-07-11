@@ -45,21 +45,21 @@ export default function WhyConquestSection() {
               </li>
             ))}
           </ul>
-          <div className="mt-9 flex flex-wrap items-center gap-6">
+          <div className="mt-9 flex flex-nowrap items-center gap-3 sm:gap-6">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-accent-500 px-9 py-4 font-heading text-sm font-bold uppercase tracking-wider text-white hover:bg-accent-600"
+              className="inline-flex flex-shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-accent-500 px-5 py-3 font-heading text-xs font-bold uppercase tracking-wider text-ink-950 hover:bg-accent-400 sm:px-9 sm:py-4 sm:text-sm"
             >
               Let's Start
             </Link>
             <Link
               to="/services"
-              className="group inline-flex items-center gap-3 font-heading text-sm font-bold uppercase tracking-wider text-ink-950 hover:text-accent-500"
+              className="group inline-flex min-w-0 items-center gap-2 font-heading text-xs font-bold uppercase tracking-wider text-ink-950 hover:text-accent-500 sm:gap-3 sm:text-sm"
             >
-              <span className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border-2 border-ink-950 group-hover:border-accent-500">
-                <ArrowIcon className="h-5 w-5" aria-hidden="true" />
+              <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border-2 border-ink-950 group-hover:border-accent-500 sm:h-14 sm:w-14">
+                <ArrowIcon className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
               </span>
-              Our Services
+              <span className="whitespace-nowrap">Our Services</span>
             </Link>
           </div>
         </div>
