@@ -14,7 +14,7 @@ export default function WhyConquestSection() {
         <div className="relative mx-auto w-full max-w-md">
           <TriangleAccents side="left" />
           <img
-            src="/why-conquest.jpg"
+            src="/why-conquest.png"
             alt="Conquest Fitness Centre members training together"
             className="relative z-10 w-full rounded-xl object-cover shadow-xl"
             loading="lazy"

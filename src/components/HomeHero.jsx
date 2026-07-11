@@ -5,7 +5,7 @@ export default function HomeHero() {
     <section className="relative flex min-h-[80vh] items-center overflow-hidden bg-ink-950 sm:min-h-[85vh]">
       {/* Mobile: full-bleed dimmed background image */}
       <img
-        src="/hero-banner.jpg"
+        src="/hero-banner.png"
         alt=""
         className="absolute inset-0 h-full w-full object-cover sm:hidden"
         style={{ objectPosition: '0% 0%' }}
@@ -15,7 +15,7 @@ export default function HomeHero() {
 
       {/* Desktop: diagonal image panel */}
       <img
-        src="/hero-banner.jpg"
+        src="/hero-banner.png"
         alt="Athlete training at Conquest Fitness Centre"
         className="absolute inset-y-0 right-0 hidden h-full w-[48%] object-cover object-top sm:block"
         style={{ clipPath: 'polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%)' }}
