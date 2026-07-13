@@ -29,10 +29,8 @@ export default function Header() {
           scrolled ? 'border-white/10 bg-ink-950/95 backdrop-blur' : 'border-transparent bg-ink-950'
         }`}
       >
-        <div className="container-page relative flex h-20 items-center md:justify-between">
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:static md:left-auto md:top-auto md:translate-x-0 md:translate-y-0">
-            <Logo />
-          </div>
+        <div className="container-page flex h-20 items-center md:justify-between">
+          <Logo />
 
           <nav aria-label="Primary navigation" className="hidden md:flex md:items-center md:gap-8">
             {navLinks.map((link) => (
