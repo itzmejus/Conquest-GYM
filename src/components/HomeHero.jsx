@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { siteInfo } from '../data/siteInfo'
 
 export default function HomeHero() {
   return (
@@ -16,7 +17,7 @@ export default function HomeHero() {
       {/* Desktop: diagonal image panel */}
       <img
         src="/hero-banner.png"
-        alt="Athlete training at Conquest Fitness Centre"
+        alt={`Athlete training at ${siteInfo.brand}`}
         className="absolute inset-y-0 right-0 hidden h-full w-[48%] object-cover object-top sm:block"
         style={{ clipPath: 'polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%)' }}
         loading="eager"
@@ -33,7 +34,7 @@ export default function HomeHero() {
             <span className="text-accent-500">Better.</span>
           </h1>
           <p className="mt-6 max-w-md text-base leading-relaxed text-gray-300 sm:text-lg">
-            Join Conquest Fitness Centre in Abu Dhabi and achieve your fitness goals with premium
+            Join {siteInfo.brand} in {siteInfo.city} and achieve your fitness goals with premium
             equipment, expert trainers, and a motivating training environment.
           </p>
           <div className="mt-9 flex flex-nowrap gap-2.5 sm:gap-4">

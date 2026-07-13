@@ -5,6 +5,7 @@ import PackageCard from '../components/PackageCard'
 import CTASection from '../components/CTASection'
 import { images } from '../data/images'
 import { packages } from '../data/packages'
+import { siteInfo } from '../data/siteInfo'
 
 const faqs = [
   {
@@ -17,7 +18,7 @@ const faqs = [
   },
   {
     question: 'Can I visit before joining?',
-    answer: 'Absolutely. Contact us to arrange a visit to Conquest Fitness Centre and see the gym floor for yourself.',
+    answer: `Absolutely. Contact us to arrange a visit to ${siteInfo.brand} and see the gym floor for yourself.`,
   },
 ]
 
@@ -25,8 +26,8 @@ export default function Packages() {
   return (
     <>
       <PageMeta
-        title="Membership Packages | Conquest Fitness Centre"
-        description="Compare Conquest Fitness Centre membership packages — Basic, Standard, and Premium — and find the right plan for your training goals in Abu Dhabi."
+        title={`Membership Packages | ${siteInfo.brand}`}
+        description={`Compare ${siteInfo.brand} membership packages — Basic, Standard, and Premium — and find the right plan for your training goals in ${siteInfo.city}.`}
       />
 
       <Hero
@@ -34,7 +35,7 @@ export default function Packages() {
         title="Simple Pricing for Every Fitness Goal"
         description="Choose the membership that fits your training style. Every plan includes full access to a modern gym floor and expert coaching support."
         image={images.dumbbellRack}
-        imageAlt="Rack of dumbbells in the Conquest Fitness Centre weight room"
+        imageAlt={`Rack of dumbbells in the ${siteInfo.brand} weight room`}
         primaryCta={{ label: 'Talk to Us', to: '/contact' }}
         secondaryCta={{ label: 'View Services', to: '/services' }}
         minHeight="min-h-[55vh]"
@@ -70,7 +71,7 @@ export default function Packages() {
       </section>
 
       <CTASection
-        title="Ready to Join Conquest Fitness?"
+        title={`Ready to Join ${siteInfo.brandShort}?`}
         description="Reach out and our team will help you pick the right membership and get started."
         ctaLabel="Contact Us to Join"
         ctaTo="/contact"

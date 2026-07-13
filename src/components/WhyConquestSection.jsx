@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { siteInfo } from '../data/siteInfo'
 
 const points = [
   'Personal Training',
@@ -15,7 +16,7 @@ export default function WhyConquestSection() {
           <TriangleAccents side="left" />
           <img
             src="/why-conquest.png"
-            alt="Conquest Fitness Centre members training together"
+            alt={`${siteInfo.brand} members training together`}
             className="relative z-10 w-full rounded-xl object-cover shadow-xl"
             loading="lazy"
           />
@@ -24,7 +25,7 @@ export default function WhyConquestSection() {
 
         <div>
           <span className="mb-3 inline-flex items-center gap-2 font-heading text-sm font-bold uppercase tracking-[0.2em] text-accent-500">
-            Why Conquest Fitness
+            Why {siteInfo.brandShort}
           </span>
           <h2 className="font-heading text-4xl font-extrabold uppercase leading-[1.05] tracking-tight text-ink-950 sm:text-5xl">
             Best <span className="text-accent-500">Equipment</span>
@@ -32,10 +33,10 @@ export default function WhyConquestSection() {
             &amp; <span className="text-accent-500">Professional</span> Trainers
           </h2>
           <p className="mt-5 text-base leading-relaxed text-gray-600">
-            Conquest Fitness Centre is built around modern strength and cardio equipment,
-            friendly and experienced trainers, and a clean, motivating environment. Whether
-            you're just getting started or you're an experienced lifter, our coaches design a
-            plan that meets you where you are.
+            {siteInfo.brand} is built around modern strength and cardio equipment, friendly and
+            experienced trainers, and a clean, motivating environment. Whether you're just
+            getting started or you're an experienced lifter, our coaches design a plan that meets
+            you where you are.
           </p>
           <ul className="mt-8 grid gap-5 sm:grid-cols-2">
             {points.map((point) => (

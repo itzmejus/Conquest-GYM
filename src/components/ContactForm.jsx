@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { siteInfo } from '../data/siteInfo'
 
 const initialValues = { name: '', email: '', phone: '', subject: '', message: '' }
 
@@ -59,8 +60,7 @@ export default function ContactForm() {
         </div>
         <h3 className="text-xl font-bold">Message sent</h3>
         <p className="max-w-sm text-sm text-gray-400">
-          Thank you for contacting Conquest Fitness Centre. Our team will get back to you
-          shortly.
+          Thank you for contacting {siteInfo.brand}. Our team will get back to you shortly.
         </p>
         <button type="button" onClick={() => setSubmitted(false)} className="btn-outline mt-2">
           Send another message

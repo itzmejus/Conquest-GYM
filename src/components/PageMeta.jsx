@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
+import { siteInfo } from '../data/siteInfo'
 
 export default function PageMeta({ title, description }) {
   useEffect(() => {
-    document.title = title || 'Conquest Fitness Centre | Gym in Abu Dhabi'
+    document.title = title || siteInfo.siteTitle
 
     if (description) {
       let tag = document.querySelector('meta[name="description"]')

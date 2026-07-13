@@ -25,8 +25,8 @@ export default function Contact() {
   return (
     <>
       <PageMeta
-        title="Contact Conquest Fitness Centre"
-        description="Get in touch with Conquest Fitness Centre in Al Danah, Abu Dhabi. Send us a message, find our address and opening hours, or ask about memberships."
+        title={`Contact ${siteInfo.brand}`}
+        description={`Get in touch with ${siteInfo.brand} in ${siteInfo.city}. Send us a message, find our address and opening hours, or ask about memberships.`}
       />
 
       <section className="section">
@@ -99,7 +99,7 @@ export default function Contact() {
         <div className="container-page">
           <div className="card overflow-hidden">
             <iframe
-              title="Conquest Fitness Centre location map"
+              title={`${siteInfo.brand} location map`}
               src={siteInfo.mapEmbedSrc}
               className="h-96 w-full border-0"
               loading="lazy"

@@ -5,19 +5,20 @@ import ServiceCard from '../components/ServiceCard'
 import CTASection from '../components/CTASection'
 import { images } from '../data/images'
 import { services } from '../data/services'
+import { siteInfo } from '../data/siteInfo'
 
 export default function Services() {
   return (
     <>
       <PageMeta
-        title="Fitness Services | Conquest Fitness Centre"
-        description="Explore Conquest Fitness Centre services in Abu Dhabi: personal training, strength training, cardio and functional training, group fitness, weight management, and nutrition guidance."
+        title={`Fitness Services | ${siteInfo.brand}`}
+        description={`Explore ${siteInfo.brand} services in ${siteInfo.city}: personal training, strength training, cardio and functional training, group fitness, weight management, and nutrition guidance.`}
       />
 
       <Hero
         eyebrow="Our Services"
         title="Training Programs Built Around Your Goals"
-        description="From one-on-one coaching to high-energy group classes, every Conquest Fitness program is guided by professional trainers to help you get real results."
+        description={`From one-on-one coaching to high-energy group classes, every ${siteInfo.brandShort} program is guided by professional trainers to help you get real results.`}
         image={images.strengthTraining}
         imageAlt="Trainer guiding a client through a strength training exercise"
         primaryCta={{ label: 'Book a Free Consultation', to: '/contact' }}
@@ -29,7 +30,7 @@ export default function Services() {
         <div className="container-page">
           <SectionHeading
             eyebrow="What We Offer"
-            title="Every Way to Train at Conquest Fitness"
+            title={`Every Way to Train at ${siteInfo.brandShort}`}
             description="Pick a single program or combine a few — our coaches will help you build the right plan."
             align="left"
           />

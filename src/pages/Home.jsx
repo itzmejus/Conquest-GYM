@@ -7,12 +7,14 @@ import ServiceCard from '../components/ServiceCard'
 import PackageCard from '../components/PackageCard'
 import TestimonialCard from '../components/TestimonialCard'
 import TeamCard from '../components/TeamCard'
+import TeamPhoto from '../components/TeamPhoto'
 import StatsBar from '../components/StatsBar'
 import CTASection from '../components/CTASection'
 import { services } from '../data/services'
 import { packages } from '../data/packages'
 import { testimonials } from '../data/testimonials'
 import { team } from '../data/team'
+import { siteInfo } from '../data/siteInfo'
 
 const whyChooseUs = [
   {
@@ -36,10 +38,7 @@ const whyChooseUs = [
 export default function Home() {
   return (
     <>
-      <PageMeta
-        title="Conquest Fitness Centre | Gym in Abu Dhabi"
-        description="Conquest Fitness Centre is a modern gym in Al Danah, Abu Dhabi offering personal training, strength and cardio programs, group fitness classes, and weight management support."
-      />
+      <PageMeta title={siteInfo.siteTitle} description={siteInfo.metaDescription} />
 
       <HomeHero />
 
@@ -70,7 +69,7 @@ export default function Home() {
       <section className="section">
         <div className="container-page">
           <SectionHeading
-            eyebrow="Why Conquest"
+            eyebrow={`Why ${siteInfo.brandShort}`}
             title="Why Members Choose Us"
             description="A gym experience built on coaching quality, equipment, and community."
           />
@@ -117,11 +116,15 @@ export default function Home() {
             title="Our Trainers"
             description="Certified professionals dedicated to helping you train safely and effectively."
           />
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((trainer) => (
-              <TeamCard key={trainer.name} trainer={trainer} />
-            ))}
-          </div>
+          {siteInfo.teamLayout === 'photo' ? (
+            <TeamPhoto />
+          ) : (
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              {team.map((trainer) => (
+                <TeamCard key={trainer.name} trainer={trainer} />
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

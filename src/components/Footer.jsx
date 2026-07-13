@@ -13,8 +13,8 @@ export default function Footer() {
         <div>
           <Logo />
           <p className="mt-4 text-sm leading-relaxed text-gray-400">
-            Conquest Fitness Centre is a modern gym in Al Danah, Abu Dhabi, offering strength and
-            cardio training, personal coaching, and group fitness classes in a clean, motivating
+            {siteInfo.brand} is a modern gym in {siteInfo.city}, offering strength and cardio
+            training, personal coaching, and group fitness classes in a clean, motivating
             environment.
           </p>
           {/* Placeholder social links until official accounts are available. */}
@@ -101,8 +101,10 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-page flex flex-col items-center justify-between gap-2 py-6 text-xs text-gray-500 sm:flex-row">
-          <p>© {year} Conquest Fitness Centre. All rights reserved.</p>
-          <p>Al Falah Street, Al Danah, Abu Dhabi</p>
+          <p>
+            © {year} {siteInfo.brand}. All rights reserved.
+          </p>
+          <p>{siteInfo.address}</p>
         </div>
       </div>
     </footer>
