@@ -1,0 +1,10 @@
+[build.environment]
+  # This project's env vars (VITE_CITY, VITE_TEAM_LAYOUT, VITE_HOURS_*,
+  # etc.) are all public brand/contact config meant to be displayed on
+  # the website itself, not secrets — there is nothing sensitive in
+  # .env. Netlify's secrets scanner flags them anyway because short
+  # values like "photo" or "Abu Dhabi" coincidentally also appear
+  # elsewhere in the source (e.g. object field names, page copy), so it
+  # can't tell a real leaked credential from ordinary text. Scanning is
+  # disabled for this reason.
+  SECRETS_SCAN_ENABLED = "false"

@@ -109,6 +109,20 @@ structured content, not flat brand strings:
 - `src/data/testimonials.js` — member testimonials (placeholder content
   until the gym provides real reviews — flagged with a code comment)
 
+## Deploying on Netlify
+
+`netlify.toml` disables Netlify's build-time secrets scanner
+(`SECRETS_SCAN_ENABLED = "false"`). This is intentional: every `.env`
+variable here is public brand/contact info meant to be shown on the
+site, not a real secret, but Netlify's scanner will still flag short
+generic values (a city name, `"photo"`, a day of the week) as
+false-positive "leaked secrets" and fail the build otherwise, since
+those same words legitimately appear elsewhere in the code too.
+
+You still need to add this gym's `VITE_*` variables under **Site
+configuration → Environment variables** in the Netlify dashboard — see
+the `.env` section above for why.
+
 ## Verifying a new brand before deploying
 
 After editing `.env`, run a build and grep for the old brand name to make
