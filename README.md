@@ -31,13 +31,23 @@ page titles and meta descriptions, the hero section, the contact page,
 and social share previews (Open Graph/Twitter tags in `index.html`, via
 Vite's built-in `%VITE_X%` HTML templating).
 
-Note: variables **must** be prefixed with `VITE_` (a Vite requirement)
-and every variable referenced in `index.html` is required — the build
-will fail if one is missing.
+Note: variables **must** be prefixed with `VITE_` (a Vite requirement).
 
-If you're deploying via a host with its own environment variable UI
-(Netlify, Render, Vercel, etc.), you can set these there instead of
-committing a `.env` file — `.env` is gitignored for exactly this reason.
+**`.env` is gitignored and never gets pushed to your git repo.** If your
+host builds from git (Netlify, Render, Vercel, etc.), it will *not* see
+your local `.env` file automatically — you must also add the same
+variables in that host's dashboard (e.g. Netlify: Site configuration →
+Environment variables) for each gym's deployment. This is the actual
+place each deployment's brand identity comes from in production;
+`.env` is only for your own local `npm run dev`/`npm run build`.
+
+If a variable referenced in `index.html` (`VITE_BRAND_NAME`,
+`VITE_SITE_TITLE`, `VITE_META_DESCRIPTION`, `VITE_SITE_URL`) is missing
+at build time, `vite.config.js` substitutes a generic fallback ("Gym
+Website", etc.) instead of failing the build — so a forgotten variable
+means bland placeholder text on that page, not a broken deploy. Still,
+don't rely on the fallback: set the real values on your host so the
+site actually shows the right gym's name.
 
 ### 2. Images
 
